@@ -18,9 +18,12 @@
                         <?php foreach($this->posts as $post): ?>
                          <tr> 
                             <td><?php echo $post->id?></td> 
-                            <td><?php echo $post->name?></td> 
-                            <td><?php echo $post->position?></td> 
-                           
+                            <td><?php echo $post->title?></td> 
+                            <td><?php echo $post->category?></td> 
+                            <td><?php echo $post->content?></td> 
+                            <td><?php echo $post->create_time?></td> 
+                            <td><?php echo $post->author?></td> 
+                            <td><?php echo $post->status?></td> 
                             <td class="action"  style="text-align:center;"> 
                             <a href="<?php echo BASE_URL?>post_edit.php?id=<?php echo $post->id?>" class="view">Edit</a> 
                            
