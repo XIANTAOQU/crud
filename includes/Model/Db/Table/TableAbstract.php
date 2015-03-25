@@ -110,9 +110,7 @@ abstract class TableAbstract implements TableInterface{
 
 	public function fetchAll($where=null,$limit = null,$sort=null){
 		$stmt = $this->select($where,$limit,$sort);
-
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
 		$rowSets = array();
 
 		foreach ($rows as $row){

@@ -8,10 +8,10 @@ class Category extends Row{
 	protected $_tableClass = "Model\Db\Table\Category";
 	protected $_postService;
 
-	function __construct(Post $_postService=null){
-		if($_postService==null){
+	function __construct(Post $postService=null){
+		if($postService==null){
 			$this->_postService = new Post();
-		}else{
+		}else{	
 			$this->_postService = $postService;
 		}
 	}

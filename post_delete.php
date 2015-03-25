@@ -12,7 +12,8 @@ $post = $postTable->getById($post_id);
 if(empty($post)){
 	die("Wrong post id supplied");
 }
+$cat_id=$post->category_id;
+echo $cat_id;
+$post->delete();
 
-$cat->delete();
-
-header("Location: ".BASE_URL.'index.php');
+//header("Location: ".BASE_URL."posts.php?cat=".$cat_id);

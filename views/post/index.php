@@ -1,4 +1,4 @@
-<?php include_once BASE_VIEW_PATH.'elements/header.php';?>
+<?php include_once BASE_VIEW_PATH.'/elements/header.php';?>
               <!-- h2 stays for breadcrumbs --> 
                 <h2><a href="index.php">Home</a> &raquo; <a href="#" ><?php echo $this->cat->name?></a></h2> 
                 
@@ -19,11 +19,11 @@
                          <tr> 
                             <td><?php echo $post->id?></td> 
                             <td><?php echo $post->title?></td> 
-                            <td><?php echo $post->category?></td> 
+                            <td><?php echo $post->category_id?></td> 
                             <td><?php echo $post->content?></td> 
-                            <td><?php echo $post->create_time?></td> 
+                            <td><?php echo $post->time_created?></td> 
                             <td><?php echo $post->author?></td> 
-                            <td><?php echo $post->status?></td> 
+                            <td><?php echo $post->getReadableStatus()?></td> 
                             <td class="action"  style="text-align:center;"> 
                             <a href="<?php echo BASE_URL?>post_edit.php?id=<?php echo $post->id?>" class="view">Edit</a> 
                            
@@ -37,7 +37,7 @@
                     <br /><br /> 
                 </div> 
                 
-                <a href="<?php echo BASE_URL?>post_add.php" class="view">Add post</a> 
+                <a href="<?php echo BASE_URL."post_add.php?cat=".$this->cat->id ?>" class="view">Add post</a> 
                 
                 <!-- // #main --> 
 <?php include_once 'elements/footer.php';?>         
